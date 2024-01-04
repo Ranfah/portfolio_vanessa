@@ -109,7 +109,7 @@ nav li:first-child {
 }
 .link_contact i:hover {
   font-size: 20px;
-  background-color: aqua;
+  background-color: rgba(255, 255, 255, 0.05);
 }
 
 @media only screen and (max-width: 600px) {
