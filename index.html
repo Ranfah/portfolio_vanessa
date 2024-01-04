@@ -19,30 +19,22 @@
   </head>
   <body>
     <div class="header">
-      <div class="logo">
-        <h3>.@Vanessa</h3>
-      </div>
-      <div class="Menu">
-        <nav class="navbar">
-          <div class="container">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle" id="navbar-toggle">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-            </div>
-            <div class="navbar-collapse" id="navbar-collapse">
-              <ul class="nav-links">
-                <li><a href="#">Acceuil</a></li>
-                <li><a href="#">Apropos</a></li>
-                <li><a href="#">Contact</a></li>
-                <!-- Add more links as needed -->
-              </ul>
-            </div>
-          </div>
-        </nav>
-      </div>
+        <nav>
+          <ul class="sidebar">
+              <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+              <li><a href="#">.@Vanessa</a></li>
+              <li><a href="#">Acceuil</a></li>
+              <li><a href="#">Apropos</a></li>
+              <li><a href="#">Contact</a></li>
+          </ul>
+          <ul>
+              <li><a href="#">.@Vanessa</a></li>
+              <li class="hideOnmobile"><a href="#">Acceuil</a></li>
+              <li class="hideOnmobile"><a href="#">Apropos</a></li>
+              <li class="hideOnmobile"><a href="#">Contact</a></li>
+              <li  class="menu_button" onclick = showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+          </ul>
+      </nav>
     </div>
     <div>
       <div class="content">
@@ -63,7 +55,7 @@
 
         </div>
         <div class="image">
-          <img src="./assiets/image/received_698252495425899.jpeg" alt="" />
+          <img src="./assiets/image/photo.png" alt="" />
         </div>
       </div>
     </div>
@@ -75,12 +67,14 @@
       </div>
     </div>
     <script>
-      document
-        .getElementById("navbar-toggle")
-        .addEventListener("click", function () {
-          var navbarCollapse = document.getElementById("navbar-collapse");
-          navbarCollapse.classList.toggle("active");
-        });
+      function showSidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'flex'
+        }
+        function hideSidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'none'
+        }
     </script>
   </body>
 </html>
